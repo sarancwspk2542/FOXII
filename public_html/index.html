@@ -56,25 +56,25 @@ body {font-family: "Roboto", sans-serif}
             <th>First Name</th>
             <th>Last Name</th>
             <th>Points</th>
-            <th>Student ID</th>
+            <th>StudentID</th>
           </tr>
           <tr>
             <td>Jill</td>
             <td>Smith</td>
             <td>50</td>
-            <th>6109680010</th>
+            <td>6109680010</td>
           </tr>
           <tr>
             <td>Eve</td>
             <td>Jackson</td>
             <td>94</td>
-            <th>6109680022</th>
+            <td>6109680022</td>
           </tr>
           <tr>
             <td>Adam</td>
             <td>Johnson</td>
             <td>67</td>
-            <th>6109680033</th>
+            <td>6109680033</td>
           </tr>
         </table>
         <div class="w3-center">
@@ -208,9 +208,9 @@ function displayW3CSS() {
     myContainer.style.display = "none";
 } 
 
-var elements = [{"FirstName":"Somchai", "LastName":"Hankla", "Points": 60},
-{"FirstName":"Nadetch", "LastName":"Hekaru", "Points": 49},
-{"FirstName":"Yaya", "LastName":"Tokoda", "Points": 78}] ; 
+var elements = [{"FirstName":"Somchai", "LastName":"Hankla", "Points": 60, "StudentID": 6109680044},
+{"FirstName":"Nadetch", "LastName":"Hekaru", "Points": 49, "StudentID": 6109680055},
+{"FirstName":"Yaya", "LastName":"Tokoda", "Points": 78, "StudentID": 6109680066}] ; 
 
 function displayDataToTable(){
     for (var i =0 ; i<elements.length; i++) {
@@ -222,10 +222,12 @@ function displayDataToTable(){
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
         let cell3 = row.insertCell(2);
+        let cell4 = row.insertCell(3);
 
         cell1.innerHTML = elements[i].FirstName;
         cell2.innerHTML = elements[i].LastName ;
         cell3.innerHTML = elements[i].Points;
+        cell4.innerHTML = elements[i].StudentID;
     }
  
 }
